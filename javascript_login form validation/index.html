@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<body>
+<center>
+<p>Name:<input id="input_name" type="text" placeholder="Enter name"></p> 
+<p>Pass:<input id="input_pass" type="password" placeholder="*******"></p>
+<p id="answer"></p>
+
+<button onClick="add();">Submit</button>
+</center>
+<script>
+
+
+function add(){
+	var user_name=['noman','irfan','kamran','ayaz'];
+	var user_pass=['123','1234','12345','123456'];
+var name=document.getElementById('input_name');
+	var pass=document.getElementById('input_pass');
+	
+	if((name.value!="")&&(pass.value!="")){
+	for(i=0; i<=user_name.length; i++){
+		
+	
+	
+	
+	if((name.value==user_name[i])&&(pass.value==user_pass[i])){
+	
+	document.getElementById('answer').innerHTML='Name:'+user_name[i]+"<br>"+'Password:'+user_pass[i];
+	}
+}} else{
+	document.getElementById('answer').innerHTML='Pleser enter valide user Name or Password';
+	
+	}
+}
+
+</script>
+
+</body>
+</html>
